@@ -27,7 +27,6 @@ def generate_response(user_input, enable_web_search, report_structure, max_searc
     # 为 global process 创建状态
     langgraph_status = st.status("**Researcher Running...**", state="running")
 
-    # Force order of expanders by creating them before iteration
     with langgraph_status:
         generate_queries_expander = st.expander("Generate Research Queries", expanded=False)
         search_queries_expander = st.expander("Search Queries", expanded=True)
@@ -127,12 +126,12 @@ def main():
 
     # 检查文件是否已上传但尚未处理
     if uploaded_files:
-        st.session_state.files_ready = True  # Mark that files are available
-        st.session_state.processing_complete = False  # Reset processing status
+        st.session_state.files_ready = True
+        st.session_state.processing_complete = False
 
     # 仅当文件上传但未处理时显示“文档记忆中...”按钮**
     if st.session_state.files_ready and not st.session_state.processing_complete:
-        process_button_placeholder = st.sidebar.empty()  # Placeholder for dynamic updates
+        process_button_placeholder = st.sidebar.empty()
 
         with process_button_placeholder.container():
             process_clicked = st.button("记忆该文档", use_container_width=True)
@@ -143,8 +142,8 @@ def main():
                     # Process files (Replace this with your actual function)
                     if process_uploaded_files(uploaded_files):
                         st.session_state.processing_complete = True
-                        st.session_state.files_ready = False  # Reset files ready flag
-                        st.session_state.uploader_key += 1  # Reset uploader to allow new uploads
+                        st.session_state.files_ready = False
+                        st.session_state.uploader_key += 1
 
                     status.update(label="文档记忆成功!", state="complete", expanded=False)
                     # st.rerun()
@@ -152,7 +151,7 @@ def main():
     # 显示聊天信息
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
-            st.write(message["content"])  # Show the message normally
+            st.write(message["content"])
 
             # 在底部显示AI信息的复制按钮
             if message["role"] == "assistant":
@@ -179,7 +178,7 @@ def main():
         st.session_state.messages.append({"role": "assistant", "content": assistant_response["final_answer"]})
 
         with st.chat_message("assistant"):
-            st.write(assistant_response["final_answer"])  # AI response
+            st.write(assistant_response["final_answer"])
 
             # Copy button below the AI message
             if st.button("📋", key=f"copy_{len(st.session_state.messages)}"):

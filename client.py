@@ -22,12 +22,12 @@ report_structure = """
 - 列出报告中引用的所有文献资料，格式规范统一
 """
 
-# Define the initial state
+# 定义初始状态
 initial_state = {
     "user_instructions": "介绍以deepseek为代表的大模型发展情况",
 }
 
-# Langgraph researcher config
+# Langgraph config
 config = {
   "configurable": {
     "enable_web_search": True,
@@ -35,8 +35,8 @@ config = {
     "max_search_queries": 5
 }}
 
-# Init vector store
-# Must add your own documents in the /files directory before running this script
+# 初始化向量数据库存储
+# 必须先在/files目录下添加您自己的文档
 vector_db = get_or_create_vector_db()
 
 # Run the researcher graph
