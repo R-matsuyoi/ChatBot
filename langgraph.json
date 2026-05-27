@@ -1,11 +1,11 @@
 {
     "dockerfile_lines": [],
     "graphs": {
-      "rag_researcher": "./src/assistant/graph.py:researcher"
+      "rag_researcher": "./Module/graph.py:researcher"
     },
-    "python_version": "3.9",
+    "python_version": "3.10",
     "env": ".env",
     "dependencies": [
       "."
     ]
-  }
+}

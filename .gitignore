@@ -1,0 +1,5 @@
+.venv/
+*.toml
+.github/
+.vscode/
+__pycache__/

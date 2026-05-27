@@ -1,0 +1,32 @@
+# ==================== LangChain / LangGraph 核心 ====================
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-experimental>=0.3.0
+langchain-text-splitters>=0.3.0
+langchain-huggingface>=0.1.0
+langchain-chroma>=0.2.0
+langchain-openai>=0.2.0
+
+# ==================== 向量库 & 嵌入模型 ====================
+chromadb>=0.5.0
+sentence-transformers>=3.0.0
+
+# ==================== 本地 LLM ====================
+ollama>=0.4.0
+
+# ==================== 联网搜索 ====================
+tavily-python>=0.5.0
+
+# ==================== Web UI ====================
+streamlit>=1.35.0
+streamlit-nested-layout>=0.1.0
+pyperclip>=1.9.0
+
+# ==================== 数据处理 & 工具 ====================
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+typing-extensions>=4.10.0
+
+# ==================== 文档解析 (PDFPlumberLoader) ====================
+pdfplumber>=0.10.0
