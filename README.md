@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/framework-LangGraph-orange.svg)](https://langchain-ai.github.io/langgraph/)
-[![Ollama](https://img.shields.io/badge/LLM-DeepSeek%20R1%201.5B-green.svg)](https://ollama.com/)
+[![Ollama](https://img.shields.io/badge/LLM-Ollama-green.svg)](https://ollama.com/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## 项目介绍
