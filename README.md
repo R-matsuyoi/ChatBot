@@ -1,4 +1,4 @@
-# 🤖 DeepSeek RAG Researcher
+# 🤖 RAG问答分析助手
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/framework-LangGraph-orange.svg)](https://langchain-ai.github.io/langgraph/)
